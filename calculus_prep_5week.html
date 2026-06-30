@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5-Week Calculus Readiness Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  svg: { fontCache: 'global' },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+        window.mathjaxDone = true;
+      });
+    }
+  }
+};
+</script>
+
+<style>
+:root{
+  --ink:#1a1a1a; --muted:#555; --accent:#0b5cad; --accent2:#9a3412;
+  --rule:#e2e2e2; --soft:#f6f7f9; --soft2:#eef4fb;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:"Source Serif 4","Georgia",Cambria,"Times New Roman",serif;
+  color:var(--ink); line-height:1.55; font-size:16px;
+  max-width:820px; margin:0 auto; padding:48px 40px 80px;
+  background:#fff;
+}
+h1,h2,h3,h4{font-family:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;line-height:1.25;}
+h1{font-size:1.9rem;margin:.2em 0 .1em;color:var(--ink);letter-spacing:-.01em;}
+h1+h3{margin-top:0;color:var(--muted);font-weight:500;font-size:1.05rem;}
+h2{font-size:1.4rem;margin:1.9em 0 .5em;padding-bottom:.25em;border-bottom:2px solid var(--accent);color:var(--accent);}
+h3{font-size:1.12rem;margin:1.5em 0 .4em;color:var(--accent2);}
+h4{font-size:1rem;margin:1.2em 0 .3em;}
+p{margin:.55em 0;}
+a{color:var(--accent);text-decoration:none;}
+hr{border:none;border-top:1px solid var(--rule);margin:1.8em 0;}
+hr+hr{display:none;}
+strong{font-weight:700;}
+em{color:var(--muted);}
+code,kbd{font-family:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-size:.86em;background:var(--soft);padding:.1em .35em;border-radius:4px;}
+pre{background:var(--soft);border:1px solid var(--rule);border-radius:8px;padding:14px 16px;overflow-x:auto;line-height:1.45;}
+pre code{background:none;padding:0;font-size:.84em;}
+ol,ul{margin:.5em 0 .8em;padding-left:1.4em;}
+li{margin:.28em 0;}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.9rem;
+  font-family:"Inter","Segoe UI",Arial,sans-serif;}
+th,td{border:1px solid var(--rule);padding:7px 10px;text-align:left;vertical-align:top;}
+thead th{background:var(--accent);color:#fff;font-weight:600;border-color:var(--accent);}
+tbody tr:nth-child(even){background:var(--soft);}
+table strong{color:var(--accent2);}
+mjx-container{overflow-x:auto;overflow-y:hidden;}
+/* Answer-key callouts */
+p.answers{background:var(--soft2);border-left:3px solid var(--accent);
+  padding:.5em .8em;border-radius:0 6px 6px 0;font-size:.92rem;margin:.7em 0 1.2em;}
+p.answers em{color:var(--accent);font-style:normal;font-weight:600;}
+/* "Answers" italic lines -> soft callout */
+p > em:first-child{}
+/* Print / PDF */
+@page{margin:18mm 16mm;}
+@media print{
+  body{max-width:none;padding:0;font-size:11.5pt;}
+  h1{font-size:20pt;}
+  h2{font-size:15pt;break-after:avoid;}
+  h3{font-size:12.5pt;break-after:avoid;}
+  h2,h3,h4{break-inside:avoid;}
+  pre,table,li{break-inside:avoid;}
+  ol,ul{break-inside:auto;}
+  a{color:var(--ink);}
+}
+</style>
+</head>
+<body>
+<h1>5-Week Calculus Readiness Plan</h1>
+<h3>For a rising 11th-grader at Whitney Young — finished Pre-Calc in 10th grade, starting Calculus after summer</h3>
+<hr />
+<h2>How to use this plan</h2>
+<p>You have <strong>~3 hours/day for 5 weeks</strong> (~105 hours). The plan front-loads <strong>Pre-Calc review</strong> (Weeks 1–2) so that the <strong>Calculus</strong> material (Weeks 3–5) sits on a solid foundation. Calculus rarely fails because of "the calculus" — it fails because of weak algebra, factoring, and trig. So the review weeks matter as much as the new material.</p>
+<p><strong>Daily rhythm (3 hours):</strong></p>
+<ul>
+<li><strong>0:00–0:20</strong> — Warm-up: redo 2–3 problems you missed the day before (spaced repetition).</li>
+<li><strong>0:20–1:20</strong> — Learn / review the day's concept + work the examples by hand.</li>
+<li><strong>1:20–1:30</strong> — Break.</li>
+<li><strong>1:30–2:40</strong> — Do the exercise set. <strong>Write every step.</strong> No mental shortcuts.</li>
+<li><strong>2:40–3:00</strong> — Check answers, mark every mistake, and write a one-line note on <em>why</em> you missed it.</li>
+</ul>
+<p><strong>Rules that actually make this work:</strong></p>
+<ol>
+<li><strong>No calculator</strong> unless a problem says so. Calculus exams are mostly no-calculator.</li>
+<li>When you check answers, the goal is not "how many right" — it's "find every misunderstanding."</li>
+<li>Keep a running <strong>"mistake log"</strong> notebook. Review it every Sunday.</li>
+<li>If a concept feels shaky, <em>slow down</em> — it's fine to spend an extra day. The schedule has slack built in.</li>
+</ol>
+<p><strong>Answer keys</strong> are at the end of each concept. Try the full set before peeking.</p>
+<hr />
+<h2>The 5-week schedule at a glance</h2>
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th>Theme</th>
+<th>Topics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Pre-Calc foundations I</td>
+<td>Functions &amp; transformations · Polynomials &amp; rational functions</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Pre-Calc foundations II</td>
+<td>Exponentials &amp; logarithms · Trigonometry · Algebra-for-calculus</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Calculus I</td>
+<td>Limits · Continuity</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Calculus II</td>
+<td>The derivative (definition) · Differentiation rules</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Calculus III</td>
+<td>Applications of derivatives · Intro to integration</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Wk 1</th>
+<th>Wk 2</th>
+<th>Wk 3</th>
+<th>Wk 4</th>
+<th>Wk 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mon</td>
+<td>Functions A</td>
+<td>Exp/Log A</td>
+<td>Limits A</td>
+<td>Derivative defn A</td>
+<td>Applications A</td>
+</tr>
+<tr>
+<td>Tue</td>
+<td>Functions B</td>
+<td>Exp/Log B</td>
+<td>Limits B</td>
+<td>Derivative defn B</td>
+<td>Applications B</td>
+</tr>
+<tr>
+<td>Wed</td>
+<td>Polynomials A</td>
+<td>Trig A</td>
+<td>Limits C</td>
+<td>Diff rules A</td>
+<td>Applications C</td>
+</tr>
+<tr>
+<td>Thu</td>
+<td>Polynomials B</td>
+<td>Trig B</td>
+<td>Continuity A</td>
+<td>Diff rules B</td>
+<td>Integration A</td>
+</tr>
+<tr>
+<td>Fri</td>
+<td>Rational fns</td>
+<td>Algebra-for-calc</td>
+<td>Continuity B</td>
+<td>Diff rules C</td>
+<td>Integration B</td>
+</tr>
+<tr>
+<td>Sat</td>
+<td>Mixed review + mistake log</td>
+<td>Mixed review</td>
+<td>Mixed review</td>
+<td>Mixed review</td>
+<td>Cumulative final</td>
+</tr>
+<tr>
+<td>Sun</td>
+<td>Rest / light</td>
+<td>Rest / light</td>
+<td>Rest / light</td>
+<td>Rest / light</td>
+<td>Rest / celebrate</td>
+</tr>
+</tbody>
+</table>
+<h2>---</h2>
+<h1>PART 1 — PRE-CALCULUS REVIEW (Weeks 1–2)</h1>
+<p>These are the five pre-calc pillars calculus leans on hardest. Each has a concept refresher, a worked example, and an exercise set (≥5 problems) with answers.</p>
+<hr />
+<h2>Concept 1 — Functions: domain, range, composition, inverses, transformations</h2>
+<p><strong>Key ideas</strong></p>
+<ul>
+<li><strong>Domain</strong> = allowed inputs. Watch for (a) denominators ≠ 0, (b) even roots of negatives, (c) logs of non-positives.</li>
+<li><strong>Composition:</strong> $(f\circ g)(x) = f(g(x))$ — inner function first.</li>
+<li><strong>Inverse:</strong> swap $x$ and $y$, solve for $y$. $f^{-1}$ undoes $f$: $f(f^{-1}(x)) = x$. A function has an inverse only if it's one-to-one (passes the horizontal line test).</li>
+<li><strong>Transformations</strong> of $y=f(x)$:</li>
+<li>$f(x)+k$ up $k$; $f(x)-k$ down $k$</li>
+<li>$f(x-h)$ right $h$; $f(x+h)$ left $h$</li>
+<li>$a\,f(x)$ vertical stretch by $a$; $f(bx)$ horizontal compress by $b$</li>
+<li>$-f(x)$ flip over $x$-axis; $f(-x)$ flip over $y$-axis</li>
+</ul>
+<p><strong>Worked example.</strong> If $f(x)=\sqrt{x-3}$, find the domain and $f^{-1}(x)$.
+Domain: need $x-3\ge 0 \Rightarrow x\ge 3$. Inverse: let $y=\sqrt{x-3}$, swap → $x=\sqrt{y-3}$, square → $x^2=y-3$, so $f^{-1}(x)=x^2+3$ for $x\ge 0$.</p>
+<p><strong>Exercises 1</strong></p>
+<ol>
+<li>Find the domain of $f(x)=\dfrac{x+1}{x^2-4}$.</li>
+<li>Find the domain of $g(x)=\sqrt{5-2x}$.</li>
+<li>Given $f(x)=x^2+1$ and $g(x)=2x-3$, find $(f\circ g)(x)$ and $(g\circ f)(x)$.</li>
+<li>Find the inverse of $f(x)=\dfrac{2x-1}{x+4}$.</li>
+<li>Describe the transformations turning $y=x^2$ into $y=-2(x+3)^2-5$, in order.</li>
+<li>If $f(x)=|x|$, sketch (describe) $y = f(x-2)+1$.</li>
+<li>Is $f(x)=x^3-x$ one-to-one on all reals? Explain.</li>
+</ol>
+<p class="answers"><em>Answers 1:</em> (1) $x\ne \pm 2$, i.e. $(-\infty,-2)\cup(-2,2)\cup(2,\infty)$. (2) $x\le \tfrac52$. (3) $(f\circ g)(x)=(2x-3)^2+1=4x^2-12x+10$; $(g\circ f)(x)=2(x^2+1)-3=2x^2-1$. (4) $f^{-1}(x)=\dfrac{-4x-1}{x-2}$. (5) Left 3, vertical stretch ×2, reflect over $x$-axis, down 5. (6) V-shape with vertex at $(2,1)$. (7) No — it fails the horizontal line test (e.g., $f(0)=f(1)=0$); not one-to-one.</p>
+<hr />
+<h2>Concept 2 — Polynomial functions: factoring, zeros, end behavior</h2>
+<p><strong>Key ideas</strong></p>
+<ul>
+<li><strong>Factoring toolkit:</strong> GCF → difference of squares $a^2-b^2=(a-b)(a+b)$ → trinomials → grouping → sum/difference of cubes $a^3\pm b^3=(a\pm b)(a^2\mp ab+b^2)$.</li>
+<li><strong>Zeros / roots:</strong> set $=0$ and factor. A root $r$ with multiplicity → graph <em>touches</em> (even mult.) or <em>crosses</em> (odd mult.) at $x=r$.</li>
+<li><strong>End behavior</strong> depends only on the leading term $a_nx^n$:</li>
+<li>$n$ even, $a_n>0$: both ends up. Even, $a_n<0$: both down.</li>
+<li>$n$ odd, $a_n>0$: down-left, up-right. Odd, $a_n<0$: up-left, down-right.</li>
+<li><strong>Factoring is the #1 calculus survival skill</strong> — limits, derivatives set to zero, and integration all hinge on it.</li>
+</ul>
+<p><strong>Worked example.</strong> Factor completely: $x^3-2x^2-9x+18$.
+Group: $x^2(x-2)-9(x-2)=(x-2)(x^2-9)=(x-2)(x-3)(x+3)$. Zeros: $2,3,-3$.</p>
+<p><strong>Exercises 2</strong></p>
+<ol>
+<li>Factor: $6x^2-x-12$.</li>
+<li>Factor completely: $x^3-27$.</li>
+<li>Factor completely: $2x^3+10x^2-2x-10$.</li>
+<li>Find all real zeros and their multiplicities: $f(x)=x^2(x-1)^3(x+4)$.</li>
+<li>State the end behavior of $f(x)=-3x^4+2x^2-7$.</li>
+<li>Factor: $x^4-16$.</li>
+<li>A cubic crosses the $x$-axis at $x=-1$ and $x=2$, and touches at $x=0$. Write a possible factored form.</li>
+</ol>
+<p class="answers"><em>Answers 2:</em> (1) $(3x+4)(2x-3)$. (2) $(x-3)(x^2+3x+9)$. (3) $2(x+5)(x-1)(x+1)$. (4) $x=0$ (mult 2), $x=1$ (mult 3), $x=-4$ (mult 1). (5) Both ends down. (6) $(x-2)(x+2)(x^2+4)$. (7) $f(x)=a\,x^2(x+1)(x-2)$ for some $a\ne0$.</p>
+<hr />
+<h2>Concept 3 — Rational functions: asymptotes, holes, simplifying</h2>
+<p><strong>Key ideas</strong></p>
+<ul>
+<li><strong>Vertical asymptote</strong> where the <em>reduced</em> denominator $=0$.</li>
+<li><strong>Hole</strong> where a factor cancels from numerator and denominator.</li>
+<li><strong>Horizontal asymptote</strong> by comparing degrees of numerator ($n$) and denominator ($d$):</li>
+<li>$n<d$: HA is $y=0$. $n=d$: HA is ratio of leading coefficients. $n>d$: no HA (slant if $n=d+1$).</li>
+<li><strong>Complex fractions</strong> — multiply top and bottom by the common denominator. This exact skill appears constantly in derivative-definition limits.</li>
+</ul>
+<p><strong>Worked example.</strong> For $f(x)=\dfrac{x^2-1}{x^2-x-2}$: factor → $\dfrac{(x-1)(x+1)}{(x-2)(x+1)}=\dfrac{x-1}{x-2}$. Hole at $x=-1$, vertical asymptote $x=2$, horizontal asymptote $y=1$ (equal degrees).</p>
+<p><strong>Exercises 3</strong></p>
+<ol>
+<li>Find all vertical asymptotes and holes of $f(x)=\dfrac{x-3}{x^2-9}$.</li>
+<li>Find the horizontal asymptote of $g(x)=\dfrac{3x^2+1}{x^2-4}$.</li>
+<li>Find the horizontal asymptote of $h(x)=\dfrac{2x+5}{x^3-1}$.</li>
+<li>Simplify the complex fraction $\dfrac{\frac1x-\frac1{3}}{x-3}$.</li>
+<li>Simplify $\dfrac{\frac{1}{x+h}-\frac1x}{h}$ (this is exactly a derivative setup — keep it).</li>
+<li>Find the slant asymptote of $\dfrac{x^2+1}{x}$.</li>
+</ol>
+<p class="answers"><em>Answers 3:</em> (1) VA at $x=-3$, hole at $x=3$. (2) $y=3$. (3) $y=0$. (4) $\dfrac{-1}{3x}$ (since $\frac1x-\frac13=\frac{3-x}{3x}=\frac{-(x-3)}{3x}$). (5) $\dfrac{-1}{x(x+h)}$. (6) $y=x$.</p>
+<hr />
+<h2>Concept 4 — Exponentials &amp; logarithms</h2>
+<p><strong>Key ideas</strong></p>
+<ul>
+<li>$\log_b(xy)=\log_b x+\log_b y$, $\;\log_b\frac{x}{y}=\log_b x-\log_b y$, $\;\log_b(x^k)=k\log_b x$.</li>
+<li>$b^{\log_b x}=x$ and $\log_b(b^x)=x$ (inverses).</li>
+<li><strong>Natural</strong> base $e\approx 2.718$; $\ln x=\log_e x$. Calculus lives in base $e$ — get comfortable now.</li>
+<li>Change of base: $\log_b x=\dfrac{\ln x}{\ln b}$.</li>
+</ul>
+<p><strong>Worked example.</strong> Solve $3^{2x-1}=27$. Write $27=3^3$, so $2x-1=3$, $x=2$.</p>
+<p><strong>Exercises 4</strong></p>
+<ol>
+<li>Solve $2^{x+1}=32$.</li>
+<li>Solve $\ln(x)+\ln(x-3)=\ln 10$.</li>
+<li>Condense to one log: $2\ln x-\tfrac12\ln y+\ln 3$.</li>
+<li>Expand: $\log\!\left(\dfrac{x^3\sqrt{y}}{z^2}\right)$.</li>
+<li>Solve $5\,e^{0.2x}=20$.</li>
+<li>Solve $\log_2(x)+\log_2(x-2)=3$.</li>
+<li>Evaluate without a calculator: $\log_3 81$, $\;\ln(e^4)$, $\;e^{\ln 7}$.</li>
+</ol>
+<p class="answers"><em>Answers 4:</em> (1) $x=4$. (2) $x=5$ (reject $x=-2$, not in domain). (3) $\ln\!\dfrac{3x^2}{\sqrt y}$. (4) $3\log x+\tfrac12\log y-2\log z$. (5) $x=5\ln 4\approx 6.93$. (6) $x=4$ (reject $x=-2$). (7) $4,\;4,\;7$.</p>
+<hr />
+<h2>Concept 5 — Trigonometry: unit circle, identities, equations, graphs</h2>
+<p><strong>Key ideas</strong></p>
+<ul>
+<li><strong>Unit circle</strong> — memorize $\sin,\cos$ at $0,\tfrac\pi6,\tfrac\pi4,\tfrac\pi3,\tfrac\pi2$ and their reflections. This is non-negotiable for calculus.</li>
+<li><strong>Pythagorean identity:</strong> $\sin^2\theta+\cos^2\theta=1$; dividing gives $1+\tan^2\theta=\sec^2\theta$.</li>
+<li>$\tan\theta=\dfrac{\sin\theta}{\cos\theta}$. Reciprocals: $\csc,\sec,\cot$.</li>
+<li><strong>Double angle:</strong> $\sin 2\theta=2\sin\theta\cos\theta$, $\;\cos 2\theta=\cos^2\theta-\sin^2\theta=1-2\sin^2\theta$.</li>
+<li><strong>Graphs:</strong> for $y=A\sin(Bx+C)+D$ — amplitude $|A|$, period $\tfrac{2\pi}{B}$, phase shift $-\tfrac{C}{B}$, midline $y=D$.</li>
+</ul>
+<p><strong>Worked example.</strong> Solve $2\sin\theta-1=0$ on $[0,2\pi)$. $\sin\theta=\tfrac12 \Rightarrow \theta=\tfrac\pi6,\tfrac{5\pi}6$.</p>
+<p><strong>Exercises 5</strong></p>
+<ol>
+<li>Give exact values: $\sin\tfrac{2\pi}{3}$, $\cos\tfrac{5\pi}{4}$, $\tan\tfrac{\pi}{3}$, $\sin\tfrac{7\pi}{6}$.</li>
+<li>Simplify $\dfrac{\sin^2\theta}{1-\cos\theta}$ (hint: use $\sin^2=1-\cos^2$).</li>
+<li>Solve $2\cos^2\theta-1=0$ on $[0,2\pi)$.</li>
+<li>Solve $\sin 2\theta=\sin\theta$ on $[0,2\pi)$.</li>
+<li>For $y=3\sin\!\left(2x-\tfrac\pi2\right)+1$: state amplitude, period, phase shift, midline.</li>
+<li>Verify the identity $\dfrac{1-\cos^2\theta}{\sin\theta}=\sin\theta$.</li>
+<li>If $\cos\theta=\tfrac35$ and $\theta$ is in quadrant IV, find $\sin\theta$ and $\tan\theta$.</li>
+</ol>
+<p class="answers"><em>Answers 5:</em> (1) $\tfrac{\sqrt3}{2},\,-\tfrac{\sqrt2}{2},\,\sqrt3,\,-\tfrac12$. (2) $1+\cos\theta$. (3) $\theta=\tfrac\pi4,\tfrac{3\pi}4,\tfrac{5\pi}4,\tfrac{7\pi}4$. (4) $2\sin\theta\cos\theta=\sin\theta\Rightarrow \sin\theta(2\cos\theta-1)=0\Rightarrow \theta=0,\pi,\tfrac\pi3,\tfrac{5\pi}3$. (5) Amp 3, period $\pi$, phase shift $+\tfrac\pi4$, midline $y=1$. (6) LHS $=\tfrac{\sin^2\theta}{\sin\theta}=\sin\theta$. ✓ (7) $\sin\theta=-\tfrac45$, $\tan\theta=-\tfrac43$.</p>
+<h2>---</h2>
+<h1>PART 2 — CALCULUS (Weeks 3–5)</h1>
+<p>Five core concepts, each with a refresher, a worked example, and <strong>≥10 questions</strong> with answers. Work them without a calculator unless noted.</p>
+<hr />
+<h2>Concept 6 — Limits</h2>
+<p><strong>Key ideas</strong></p>
+<ul>
+<li>A limit $\displaystyle\lim_{x\to a}f(x)=L$ asks: what value does $f$ <em>approach</em> as $x$ nears $a$? (The actual value $f(a)$ doesn't matter.)</li>
+<li><strong>Direct substitution</strong> works when $f$ is continuous at $a$. Try it first.</li>
+<li>If you get $\tfrac00$ (indeterminate), <strong>factor and cancel</strong>, or <strong>rationalize</strong>, or simplify a complex fraction, then substitute.</li>
+<li><strong>One-sided limits:</strong> $\lim_{x\to a^-}$ (from the left) and $\lim_{x\to a^+}$ (from the right). The two-sided limit exists only if both sides agree.</li>
+<li><strong>Limits at infinity:</strong> divide every term by the highest power of $x$ in the denominator. (Same rules as horizontal asymptotes.)</li>
+<li><strong>Special limit:</strong> $\displaystyle\lim_{x\to 0}\frac{\sin x}{x}=1$.</li>
+</ul>
+<p><strong>Worked example.</strong> $\displaystyle\lim_{x\to 2}\frac{x^2-4}{x-2}$. Sub gives $\tfrac00$. Factor: $\tfrac{(x-2)(x+2)}{x-2}=x+2\to 4$.</p>
+<p><strong>Exercises 6</strong></p>
+<ol>
+<li>$\displaystyle\lim_{x\to 3}(x^2-5x+2)$</li>
+<li>$\displaystyle\lim_{x\to -1}\frac{x^2-1}{x+1}$</li>
+<li>$\displaystyle\lim_{x\to 4}\frac{x-4}{\sqrt{x}-2}$</li>
+<li>$\displaystyle\lim_{x\to 0}\frac{\sqrt{x+9}-3}{x}$</li>
+<li>$\displaystyle\lim_{x\to \infty}\frac{3x^2-2x+1}{5x^2+7}$</li>
+<li>$\displaystyle\lim_{x\to \infty}\frac{4x+1}{x^2-3}$</li>
+<li>$\displaystyle\lim_{x\to \infty}\frac{2x^3-x}{x^2+5}$</li>
+<li>$\displaystyle\lim_{x\to 0}\frac{\sin 3x}{x}$</li>
+<li>$\displaystyle\lim_{x\to 0^+}\frac{1}{x}$ and $\displaystyle\lim_{x\to 0^-}\frac{1}{x}$ — do they agree?</li>
+<li>For $f(x)=\begin{cases}x+1,& x<2\\ x^2,& x\ge 2\end{cases}$, find $\lim_{x\to 2^-}f(x)$, $\lim_{x\to 2^+}f(x)$, and state whether $\lim_{x\to2}f(x)$ exists.</li>
+<li>$\displaystyle\lim_{x\to 1}\frac{x^2+x-2}{x^2-1}$</li>
+<li>$\displaystyle\lim_{x\to 0}\frac{1-\cos x}{x}$ (hint: multiply by $\frac{1+\cos x}{1+\cos x}$).</li>
+</ol>
+<p class="answers"><em>Answers 6:</em> (1) $-4$. (2) $-2$. (3) $4$ (rationalize or factor $x-4=(\sqrt x-2)(\sqrt x+2)$). (4) $\tfrac16$. (5) $\tfrac35$. (6) $0$. (7) $\infty$ (diverges). (8) $3$. (9) $+\infty$ and $-\infty$ — they disagree, so the two-sided limit does not exist. (10) $3$, $4$, does not exist (sides disagree). (11) $\tfrac32$. (12) $0$.</p>
+<hr />
+<h2>Concept 7 — Continuity</h2>
+<p><strong>Key ideas</strong></p>
+<ul>
+<li>$f$ is <strong>continuous at $a$</strong> if all three hold: (i) $f(a)$ is defined, (ii) $\lim_{x\to a}f(x)$ exists, (iii) $\lim_{x\to a}f(x)=f(a)$.</li>
+<li><strong>Types of discontinuity:</strong> <em>removable</em> (a hole — limit exists but ≠ value, or value undefined), <em>jump</em> (one-sided limits disagree), <em>infinite</em> (vertical asymptote).</li>
+<li><strong>Polynomials</strong> are continuous everywhere. <strong>Rational/trig/log</strong> are continuous on their domains.</li>
+<li><strong>Intermediate Value Theorem (IVT):</strong> if $f$ is continuous on $[a,b]$ and $N$ is between $f(a)$ and $f(b)$, then $f(c)=N$ for some $c$ in $(a,b)$. Used to prove a root exists.</li>
+</ul>
+<p><strong>Worked example.</strong> Find $k$ so that $f(x)=\begin{cases}x^2,& x\le 1\\ kx+1,& x>1\end{cases}$ is continuous. Need left limit $=$ right limit: $1=k+1\Rightarrow k=0$.</p>
+<p><strong>Exercises 7</strong></p>
+<ol>
+<li>Is $f(x)=\dfrac{x^2-9}{x-3}$ continuous at $x=3$? Classify any discontinuity.</li>
+<li>Where is $g(x)=\dfrac{x+1}{x^2-x-6}$ discontinuous, and what type?</li>
+<li>Classify the discontinuity of $h(x)=\dfrac{|x|}{x}$ at $x=0$.</li>
+<li>Find $a$ so that $f(x)=\begin{cases}3x-1,& x<2\\ ax^2,& x\ge 2\end{cases}$ is continuous at $x=2$.</li>
+<li>Find $a$ and $b$ so that $f(x)=\begin{cases}x+1,& x\le 0\\ ax+b,& 0<x<3\\ 2x,& x\ge 3\end{cases}$ is continuous everywhere.</li>
+<li>State where $f(x)=\dfrac{1}{\sqrt{x-4}}$ is continuous.</li>
+<li>Use the IVT to show $x^3+x-1=0$ has a root in $(0,1)$.</li>
+<li>Use the IVT to show $\cos x = x$ has a solution in $(0,1)$.</li>
+<li>Is $f(x)=\tan x$ continuous at $x=\tfrac\pi2$? Explain.</li>
+<li>For $f(x)=\begin{cases}\frac{\sin x}{x},& x\ne 0\\ 1,& x=0\end{cases}$, is $f$ continuous at $0$? Justify.</li>
+<li>Give a function with a removable discontinuity at $x=5$ and continuous elsewhere.</li>
+</ol>
+<p class="answers"><em>Answers 7:</em> (1) Not continuous; <strong>removable</strong> ($f(3)$ undefined but limit $=6$). (2) Discontinuous at $x=3$ and $x=-2$, both <strong>infinite</strong> (vertical asymptotes; numerator nonzero there). (3) <strong>Jump</strong> (left limit $-1$, right limit $+1$). (4) $a=\tfrac54$. (5) $a=\tfrac53,\ b=1$ (from $b=1$ at $0$, and $3a+b=6$ at $3$). (6) Continuous for $x>4$. (7) $f(0)=-1<0$, $f(1)=1>0$, $f$ continuous ⇒ root in $(0,1)$. (8) Let $g(x)=\cos x-x$; $g(0)=1>0$, $g(1)=\cos1-1<0$ ⇒ root. (9) No — undefined at $\tfrac\pi2$ (infinite discontinuity). (10) Yes — $\lim_{x\to0}\frac{\sin x}{x}=1=f(0)$. (11) e.g. $f(x)=\dfrac{x^2-25}{x-5}$.</p>
+<hr />
+<h2>Concept 8 — The derivative (limit definition)</h2>
+<p><strong>Key ideas</strong></p>
+<ul>
+<li><strong>Definition:</strong> $\displaystyle f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$.</li>
+<li><strong>Meaning:</strong> instantaneous rate of change = slope of the tangent line at a point.</li>
+<li><strong>Alternate form</strong> (slope at a specific point $a$): $\displaystyle f'(a)=\lim_{x\to a}\frac{f(x)-f(a)}{x-a}$.</li>
+<li><strong>Tangent line</strong> at $x=a$: $y-f(a)=f'(a)(x-a)$.</li>
+<li>The complex-fraction and rationalizing skills from Week 2 are exactly what these limits require.</li>
+</ul>
+<p><strong>Worked example.</strong> Use the definition for $f(x)=x^2$.
+$\dfrac{(x+h)^2-x^2}{h}=\dfrac{2xh+h^2}{h}=2x+h\to 2x$. So $f'(x)=2x$.</p>
+<p><strong>Exercises 8</strong> (use the limit definition for 1–8)</p>
+<ol>
+<li>$f(x)=3x+2$</li>
+<li>$f(x)=x^2-x$</li>
+<li>$f(x)=5$ (constant)</li>
+<li>$f(x)=x^3$</li>
+<li>$f(x)=\dfrac1x$</li>
+<li>$f(x)=\sqrt{x}$</li>
+<li>$f(x)=2x^2+3x-1$</li>
+<li>$f(x)=\dfrac{1}{x+1}$</li>
+<li>Find the slope of the tangent to $f(x)=x^2$ at $x=3$ using the alternate form.</li>
+<li>Find the equation of the tangent line to $f(x)=x^2-2x$ at $x=1$.</li>
+<li>A particle's position is $s(t)=t^2+t$. Find its instantaneous velocity $s'(t)$ from the definition, then evaluate at $t=2$.</li>
+<li>Explain in one sentence why $f(x)=|x|$ has no derivative at $x=0$.</li>
+</ol>
+<p class="answers"><em>Answers 8:</em> (1) $3$. (2) $2x-1$. (3) $0$. (4) $3x^2$. (5) $-\dfrac1{x^2}$. (6) $\dfrac{1}{2\sqrt x}$. (7) $4x+3$. (8) $-\dfrac{1}{(x+1)^2}$. (9) $6$. (10) $f(1)=-1$, $f'(1)=0$ ⇒ $y=-1$. (11) $s'(t)=2t+1$, so $s'(2)=5$. (12) The left-hand slope ($-1$) and right-hand slope ($+1$) disagree, so the defining limit doesn't exist (corner).</p>
+<hr />
+<h2>Concept 9 — Differentiation rules</h2>
+<p><strong>Key ideas</strong></p>
+<ul>
+<li><strong>Power rule:</strong> $\dfrac{d}{dx}x^n=nx^{n-1}$. Constant multiple and sum rules apply termwise.</li>
+<li><strong>Product rule:</strong> $(fg)'=f'g+fg'$.</li>
+<li><strong>Quotient rule:</strong> $\left(\dfrac fg\right)'=\dfrac{f'g-fg'}{g^2}$.</li>
+<li><strong>Chain rule:</strong> $\dfrac{d}{dx}f(g(x))=f'(g(x))\cdot g'(x)$ — "derivative of outside (leaving inside alone) × derivative of inside."</li>
+<li><strong>Key derivatives:</strong> $\dfrac{d}{dx}\sin x=\cos x$, $\dfrac{d}{dx}\cos x=-\sin x$, $\dfrac{d}{dx}e^x=e^x$, $\dfrac{d}{dx}\ln x=\dfrac1x$.</li>
+</ul>
+<p><strong>Worked example (chain).</strong> $\dfrac{d}{dx}(3x^2+1)^5 = 5(3x^2+1)^4\cdot 6x = 30x(3x^2+1)^4.$</p>
+<p><strong>Exercises 9</strong></p>
+<ol>
+<li>$f(x)=4x^5-3x^2+7x-9$</li>
+<li>$f(x)=x^{2/3}+\dfrac{1}{x^2}$  (rewrite $\tfrac1{x^2}=x^{-2}$)</li>
+<li>$f(x)=\sqrt{x}\,(x^2+1)$  (product rule)</li>
+<li>$f(x)=\dfrac{2x+1}{x-3}$  (quotient rule)</li>
+<li>$f(x)=(x^2-4x)^7$  (chain rule)</li>
+<li>$f(x)=\sin(5x)$</li>
+<li>$f(x)=e^{3x}$</li>
+<li>$f(x)=\ln(x^2+1)$</li>
+<li>$f(x)=x^2 e^x$  (product)</li>
+<li>$f(x)=\dfrac{\sin x}{x}$  (quotient)</li>
+<li>$f(x)=\cos(x^2)$  (chain)</li>
+<li>$f(x)=\sqrt{4x^2+1}$  (chain)</li>
+<li>$f(x)=(2x+1)^3(x-5)^2$  (product + chain)</li>
+<li>Find $f'(1)$ for $f(x)=x^3-2x$, then the tangent line at $x=1$.</li>
+</ol>
+<p class="answers"><em>Answers 9:</em> (1) $20x^4-6x+7$. (2) $\tfrac23x^{-1/3}-2x^{-3}$. (3) $\tfrac{1}{2\sqrt x}(x^2+1)+\sqrt x(2x)=\tfrac{5x^2+1}{2\sqrt x}$. (4) $\dfrac{-7}{(x-3)^2}$. (5) $7(x^2-4x)^6(2x-4)$. (6) $5\cos(5x)$. (7) $3e^{3x}$. (8) $\dfrac{2x}{x^2+1}$. (9) $2xe^x+x^2e^x=xe^x(x+2)$. (10) $\dfrac{x\cos x-\sin x}{x^2}$. (11) $-2x\sin(x^2)$. (12) $\dfrac{4x}{\sqrt{4x^2+1}}$. (13) $3(2x+1)^2(2)(x-5)^2+(2x+1)^3\cdot2(x-5)=2(2x+1)^2(x-5)\big[3(x-5)+(2x+1)\big]=2(2x+1)^2(x-5)(5x-14)$. (14) $f'(x)=3x^2-2$, $f'(1)=1$, $f(1)=-1$ ⇒ $y=x-2$.</p>
+<hr />
+<h2>Concept 10 — Applications of derivatives + intro to integration</h2>
+<p><strong>Key ideas — applications</strong></p>
+<ul>
+<li><strong>Increasing/decreasing:</strong> $f'>0$ increasing, $f'<0$ decreasing.</li>
+<li><strong>Critical points:</strong> where $f'=0$ or undefined. <strong>First derivative test</strong> classifies local max/min by sign change of $f'$.</li>
+<li><strong>Concavity:</strong> $f''>0$ concave up, $f''<0$ concave down; <strong>inflection</strong> where $f''$ changes sign.</li>
+<li><strong>Optimization:</strong> model the quantity, take the derivative, set $=0$, verify it's the max/min.</li>
+<li><strong>Related rates:</strong> differentiate a relationship with respect to time $t$ (chain rule everywhere).</li>
+</ul>
+<p><strong>Key ideas — integration (intro)</strong></p>
+<ul>
+<li><strong>Antiderivative:</strong> $F$ with $F'=f$. Power rule reversed: $\displaystyle\int x^n\,dx=\frac{x^{n+1}}{n+1}+C$ ($n\ne -1$).</li>
+<li><strong>Fundamental Theorem of Calculus:</strong> $\displaystyle\int_a^b f(x)\,dx=F(b)-F(a)$ where $F'=f$.</li>
+<li>A definite integral = signed area under the curve.</li>
+</ul>
+<p><strong>Worked example (optimization).</strong> A farmer has 100 ft of fence for a rectangular pen against a wall (3 sides fenced). Maximize area. Let width $x$, length $100-2x$. $A(x)=x(100-2x)=100x-2x^2$. $A'(x)=100-4x=0\Rightarrow x=25$. Area $=25\cdot50=1250$ ft².</p>
+<p><strong>Exercises 10</strong></p>
+<ol>
+<li>Find the critical points of $f(x)=x^3-3x^2+1$ and classify each (local max/min).</li>
+<li>On what intervals is $f(x)=x^3-12x$ increasing?</li>
+<li>Find the intervals of concavity and any inflection point of $f(x)=x^3-3x$.</li>
+<li>Find the absolute max and min of $f(x)=x^2-4x+1$ on $[0,3]$.</li>
+<li>A 12 cm wire is cut and bent into a square. If instead the whole wire forms a rectangle of width $w$, find the $w$ maximizing area. (Perimeter 12.)</li>
+<li>Find two positive numbers summing to 20 whose product is maximal.</li>
+<li>A balloon's radius grows at $2$ cm/s. How fast is volume changing when $r=5$? ($V=\tfrac43\pi r^3$.)</li>
+<li>Evaluate $\displaystyle\int (3x^2-4x+5)\,dx$.</li>
+<li>Evaluate $\displaystyle\int \left(\sqrt{x}+\frac{1}{x^2}\right)dx$.</li>
+<li>Evaluate $\displaystyle\int_0^2 (x^2)\,dx$.</li>
+<li>Evaluate $\displaystyle\int_1^4 \frac{1}{\sqrt{x}}\,dx$.</li>
+<li>Evaluate $\displaystyle\int_0^{\pi} \sin x\,dx$.</li>
+<li>Find the area under $f(x)=2x$ from $x=0$ to $x=3$ (check against the triangle area).</li>
+</ol>
+<p class="answers"><em>Answers 10:</em> (1) $f'=3x^2-6x=3x(x-2)$; $x=0$ local max ($f=1$), $x=2$ local min ($f=-3$). (2) $f'=3x^2-12>0\Rightarrow x<-2$ or $x>2$. (3) $f''=6x$; concave down $x<0$, up $x>0$; inflection at $(0,0)$. (4) $f'=2x-4=0\Rightarrow x=2$; check endpoints: $f(0)=1,f(2)=-3,f(3)=-2$ ⇒ max $1$ at $x=0$, min $-3$ at $x=2$. (5) $w=3$ (a $3\times3$ square, area 9). (6) $10$ and $10$ (product 100). (7) $\tfrac{dV}{dt}=4\pi r^2\tfrac{dr}{dt}=4\pi(25)(2)=200\pi\approx 628$ cm³/s. (8) $x^3-2x^2+5x+C$. (9) $\tfrac23x^{3/2}-x^{-1}+C$. (10) $\tfrac83$. (11) $\big[2\sqrt x\big]_1^4=4-2=2$. (12) $\big[-\cos x\big]_0^\pi=1-(-1)=2$. (13) $\big[x^2\big]_0^3=9$ ✓ (triangle: $\tfrac12\cdot3\cdot6=9$).</p>
+<h2>---</h2>
+<h1>Weekly checkpoints &amp; final</h1>
+<p><strong>End of Week 2 (Pre-calc gate):</strong> You should be able to, with no calculator, factor any quadratic/cubic in under a minute, recall the unit circle cold, and simplify $\frac{1/(x+h)-1/x}{h}$ without hesitation. If any of these are slow, spend an extra day before Week 3 — limits will punish gaps here.</p>
+<p><strong>End of Week 4 (Derivative gate):</strong> You should be able to differentiate any combination of power/product/quotient/chain on sight, and write a tangent line from scratch.</p>
+<p><strong>Week 5 Saturday — Cumulative final (suggested, ~2.5 hrs):</strong> Build a 20-question mixed test pulling 2 from each concept above. Time yourself. Grade honestly. Anything you miss goes in the mistake log for one last review on Sunday.</p>
+<hr />
+<h2>If you finish early or want to go further (for a Whitney Young pace)</h2>
+<ul>
+<li><strong>Implicit differentiation</strong> and <strong>derivatives of inverse trig</strong> — common early in AP Calc AB.</li>
+<li><strong>u-substitution</strong> for integrals — the natural next step after Concept 10.</li>
+<li><strong>Limits with L'Hôpital's rule</strong> — a slick shortcut for $\frac00$ and $\frac\infty\infty$ (you'll see why factoring still matters).</li>
+<li>Resources worth a look: <em>Paul's Online Math Notes</em> (free, excellent practice), <em>Professor Leonard</em> (YouTube, full lectures), and <em>Khan Academy</em>'s AP Calculus AB track for extra graded problem sets.</li>
+</ul>
+<p><strong>Final reminder:</strong> the single best predictor of an easy calculus year is <em>automatic</em> algebra and trig. Treat Weeks 1–2 as seriously as Weeks 3–5. Good luck. 加油！</p>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
